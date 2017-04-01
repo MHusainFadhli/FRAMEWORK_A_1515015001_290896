@@ -38,9 +38,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">M Husain Fadhli</div>
-                <div class="title">1515015001</div>
+                <div class="title">Rozy Rivaldi</div>
+                <div class="title">1515015007</div>
             </div>
         </div>
-    </body>s
+    </body>
 </html>

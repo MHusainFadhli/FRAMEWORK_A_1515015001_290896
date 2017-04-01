@@ -17,10 +17,10 @@ class DosenController extends Controller
     }
     public function simpan(){
         $dosen = new dosen();
-        $dosen->nama  = 'pados';
-        $dosen->nip = '12351212';
-        $dosen->alamat = 'tungutng';
-        $dosen->pengguna_id = '13';
+        $dosen->nama  = 'bu tung';
+        $dosen->nip = '1010174772';
+        $dosen->alamat = 'dimana dia senang';
+        $dosen->pengguna_id = '10';
         $dosen->save();
         return "data dengan nama {$dosen->nama} telah disimpan";
     }

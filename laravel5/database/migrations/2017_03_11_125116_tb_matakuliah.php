@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatTableRuangan extends Migration
+class TbMatakuliah extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class BuatTableRuangan extends Migration
      */
     public function up()
     {
-        Schema::create('ruangan', function (Blueprint $table) {
+        Schema::create('matakuliah', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tittle');
-            $table->timestamps();
+            $table->string('title',255);
+            $table->string('keterangan',255);
+            
         });
     }
 
@@ -26,6 +27,6 @@ class BuatTableRuangan extends Migration
      */
     public function down()
     {
-        Schema::drop('ruangan');
+        Schema::drop('matakuliah');
     }
 }

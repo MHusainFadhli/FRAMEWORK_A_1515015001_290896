@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\pengguna;
+
 
 class PenggunaController extends Controller
 {
 
 	public function awal()
 {
-	return "Hello dari PenggunaController";
+	return "Hello dari Pengguna Controller";
 	
 }
 public function tambah()
@@ -23,8 +25,8 @@ public function simpan()
 {
 
       $pengguna = new Pengguna();
-      $pengguna -> username   = 'ferza';
-      $pengguna -> password  = 'ferza';
+      $pengguna ->username   = 'rozy';
+      $pengguna ->passwoard  = 'rozy';
       $pengguna ->save();
       return "data dengan username {$pengguna->username} telah disimpan";
   }

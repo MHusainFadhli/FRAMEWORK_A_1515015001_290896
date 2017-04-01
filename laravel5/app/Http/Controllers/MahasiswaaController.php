@@ -10,21 +10,17 @@ use App\mahasiswaa;
 class MahasiswaaController extends Controller
 {
      public function awal(){
-        // return "hello dari MahasiswaaController";
-        //relasi dari dosen ke pengguna
-        return $data = mahasiswaa::where('pengguna_id', 14)->with('pengguna')->get(); 
-        //relasi dari pengguna ke dosen
-        return $data = pengguna::where('id', 12)->with('mahasiswaa')->get();
+        
     }
     public function tambah(){
         return $this -> simpan();
     }
     public function simpan(){
         $mahasiswaa = new mahasiswaa();
-        $mahasiswaa->nama  = 'M Husan Fadhli';
-        $mahasiswaa->nim = '1515015001';
-        $mahasiswaa->alamat = 'suandi';
-        $mahasiswaa->pengguna_id = '14';
+        $mahasiswaa->nama  = 'rozy';
+        $mahasiswaa->nim = '1515015007';
+        $mahasiswaa->alamat = 'di atas tanah';
+        $mahasiswaa->pengguna_id = '19';
         $mahasiswaa->save();
         return "data dengan nama {$mahasiswaa->nama} telah disimpan";
     }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatTableJadwalMatakuliah extends Migration
+class TbJadwalMatakuliah extends Migration
 {
     /**
      * Run the migrations.
@@ -15,12 +15,11 @@ class BuatTableJadwalMatakuliah extends Migration
         Schema::create('jadwal_matakuliah', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('mahasiswa_id',false,true);
-            $table->foreign('mahasiswa_id')->reference('id')->on('mahasiswa')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('mahasiswa_id')->references('id')->on('mahasiswaa')->onDelete('cascade');
             $table->integer('ruangan_id',false,true);
-            $table->foreign('ruangan_id')->reference('id')->on('ruangan')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('dosen_matakuliah',false,true);
-            $table->foreign('dosen_matakuliah')->reference('id')->on('dosen_matakuliah')->onDelete('cascade')->onUpdate('cascade');
-            $table->timestamps();
+            $table->foreign('ruangan_id')->references('id')->on('ruangan')->onDelete('cascade');
+            $table->integer('dosen_id',false,true);
+            $table->foreign('dosen_id')->references('id')->on('dosen')->onDelete('cascade');
         });
     }
 
